@@ -2,8 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import EstimateModal from "./components/EstimateModal";
@@ -18,6 +18,16 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
+
 const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -27,6 +37,7 @@ const App = () => {
         <Toaster />
         <Sonner position="top-right" />
         <BrowserRouter>
+          <ScrollToTop />
           <ScrollProgress />
           <Navbar onEstimateClick={() => setIsModalOpen(true)} />
           <EstimateModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

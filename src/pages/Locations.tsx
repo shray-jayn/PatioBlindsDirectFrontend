@@ -137,20 +137,27 @@ const Locations = () => {
                   </div>
 
                   <div className="space-y-2">
+                    <a 
+                      href="tel:6578955989"
+                      className="block text-sm font-semibold text-[#D4AF78] hover:text-[#D4AF78]/80 transition-colors mb-3"
+                    >
+                      <Phone className="w-3.5 h-3.5 inline mr-1.5" />
+                      (657) 895-5989
+                    </a>
                     <Button
                       size="sm"
                       className="w-full hover:scale-105 transition-transform"
                       asChild
                     >
-                      <a href="tel:6264304003">
+                      <a href="tel:6578955989">
                         <Phone className="w-4 h-4 mr-2" />
                         Call Now
                       </a>
                     </Button>
                     <Button
                       size="sm"
-                      variant="ghost"
-                      className="w-full text-primary hover:bg-[#D4AF78]/10 group"
+                      variant="outline"
+                      className="w-full border-2 hover:bg-[#D4AF78]/10"
                     >
                       Learn More
                       <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -214,7 +221,7 @@ const Locations = () => {
                   Call (626) 430-4003
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform">
+              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform border-2">
                 Request Free Estimate
               </Button>
             </div>

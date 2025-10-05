@@ -52,9 +52,9 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               size="lg"
               variant="outline"
               asChild
-              className="transition-transform hover:scale-105"
+              className="transition-transform hover:scale-105 border-2"
             >
-              <a href="tel:6264304003">
+              <a href="tel:6578955989">
                 <Phone className="w-4 h-4 mr-2" />
                 Call Sales
               </a>

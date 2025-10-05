@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { Phone } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 
 interface NavbarProps {
   onEstimateClick: () => void;
@@ -9,6 +9,7 @@ interface NavbarProps {
 
 const Navbar = ({ onEstimateClick }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -18,6 +19,21 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -87,7 +103,81 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
             <Button 
               onClick={onEstimateClick} 
               size="sm" 
-              className="font-medium hover:shadow-lg hover:scale-105 transition-all"
+              className="font-medium hover:shadow-lg hover:scale-105 transition-all hidden md:flex"
+            >
+              Contact Us — FREE Estimate
+            </Button>
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 hover:bg-[#D4AF78]/10 rounded-lg transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden fixed inset-0 top-16 lg:top-20 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full p-6 gap-4 overflow-y-auto">
+          <Link
+            to="/products"
+            className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+              isActive("/products") ? "bg-[#D4AF78]/10 text-primary" : "hover:bg-[#D4AF78]/10"
+            }`}
+          >
+            Products
+          </Link>
+          <Link
+            to="/how-it-works"
+            className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+              isActive("/how-it-works") ? "bg-[#D4AF78]/10 text-primary" : "hover:bg-[#D4AF78]/10"
+            }`}
+          >
+            How it Works
+          </Link>
+          <Link
+            to="/commercial"
+            className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+              isActive("/commercial") ? "bg-[#D4AF78]/10 text-primary" : "hover:bg-[#D4AF78]/10"
+            }`}
+          >
+            Commercial
+          </Link>
+          <Link
+            to="/locations"
+            className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+              isActive("/locations") ? "bg-[#D4AF78]/10 text-primary" : "hover:bg-[#D4AF78]/10"
+            }`}
+          >
+            Locations
+          </Link>
+          <Link
+            to="/faq"
+            className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+              isActive("/faq") ? "bg-[#D4AF78]/10 text-primary" : "hover:bg-[#D4AF78]/10"
+            }`}
+          >
+            FAQ
+          </Link>
+
+          <div className="border-t border-border pt-4 mt-2">
+            <a 
+              href="tel:6264304003" 
+              className="flex items-center gap-2 text-lg font-medium py-3 px-4 hover:bg-[#D4AF78]/10 rounded-lg transition-colors"
+            >
+              <Phone className="w-5 h-5" />
+              (626) 430-4003
+            </a>
+            <Button 
+              onClick={onEstimateClick} 
+              size="lg" 
+              className="w-full mt-4 font-medium hover:shadow-lg"
             >
               Contact Us — FREE Estimate
             </Button>

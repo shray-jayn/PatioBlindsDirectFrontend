@@ -52,8 +52,8 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">
-      <div className="glass-panel rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto glow-accent animate-scale-in">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Request Free Estimate</h2>
@@ -66,7 +66,7 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
             </button>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <Label htmlFor="name">Name *</Label>
               <Input
@@ -127,7 +127,7 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
               </Select>
             </div>
 
-            <div>
+            <div className="md:col-span-2">
               <Label htmlFor="message">Message</Label>
               <Textarea
                 id="message"
@@ -138,7 +138,7 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
               />
             </div>
 
-            <div className="flex gap-3 pt-4">
+            <div className="md:col-span-2 flex gap-3 pt-4">
               <Button type="button" variant="outline" onClick={onClose} className="flex-1">
                 Cancel
               </Button>

@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Phone, Mail } from "lucide-react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -95,7 +96,7 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="glass-panel rounded-xl px-6 hover:glow-accent transition-all"
+                className="border-2 rounded-xl px-6 bg-white hover:border-primary card-hover"
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline py-4">
                   {faq.question}
@@ -110,40 +111,22 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
       </section>
 
       {/* Contact CTA */}
-      <section
-        ref={ctaAnimation.elementRef}
-        className={`py-12 lg:py-16 px-4 bg-secondary/50 transition-all duration-700 ${
-          ctaAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container mx-auto max-w-2xl text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold mb-4">Still Have Questions?</h2>
-          <p className="text-muted-foreground mb-6">
-            Our team is here to help. Reach out by phone or email, or request a free on-site consultation.
-          </p>
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" onClick={onEstimateClick} className="transition-transform hover:scale-105">
-              Request Free Estimate
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              asChild
-              className="transition-transform hover:scale-105"
-            >
-              <a href="tel:6264304003">
-                <Phone className="w-4 h-4 mr-2" />
-                Call (626) 430-4003
-              </a>
-            </Button>
-          </div>
-
-          <div className="mt-6 text-sm text-muted-foreground">
-            <p>
-              Email: <a href="mailto:hello@patioblindsdirect.com" className="underline hover:no-underline">hello@patioblindsdirect.com</a>
+      <section className="py-12 lg:py-16 px-4 bg-gradient-to-br from-slate-50 to-white border-t">
+        <div className="container mx-auto max-w-3xl">
+          <Card className="p-8 lg:p-12 text-center bg-white border-2 shadow-xl">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Patio?</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              Get expert advice and a free estimate. Most projects completed in 2-3 days.
             </p>
-          </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button size="lg" asChild className="hover:scale-105 transition-transform shadow-lg">
+                <a href="tel:6264304003">Call (626) 430-4003</a>
+              </Button>
+              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform border-2">
+                Request Free Estimate
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
     </div>

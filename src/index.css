@@ -8,46 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 20% 7%;
-    --foreground: 210 20% 93%;
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
 
-    --card: 220 18% 12%;
-    --card-foreground: 210 20% 93%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 220 18% 12%;
-    --popover-foreground: 210 20% 93%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 215 85% 76%;
-    --primary-foreground: 220 20% 7%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 165 73% 71%;
-    --secondary-foreground: 220 20% 7%;
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 220 15% 25%;
-    --muted-foreground: 220 10% 62%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 215 85% 76%;
-    --accent-foreground: 220 20% 7%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 215 85% 76%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
-    --radius: 1.25rem;
+    --radius: 0.75rem;
     
     /* Premium design tokens */
-    --gradient-bg: linear-gradient(135deg, #0b0c10 0%, #111318 100%);
-    --gradient-primary: linear-gradient(135deg, #8ab4ff 0%, #5c94ff 100%);
-    --gradient-secondary: linear-gradient(135deg, #7ef0d0 0%, #4ecfb0 100%);
-    --glass-bg: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.12);
-    --shadow-glow: 0 0 40px rgba(138, 180, 255, 0.15);
-    --shadow-premium: 0 20px 60px rgba(0, 0, 0, 0.5);
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    --shadow-elegant: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.03);
+    --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.08);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -65,44 +61,6 @@ All colors MUST be HSL.
 
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-
-  .dark {
-    --background: 220 20% 7%;
-    --foreground: 210 20% 93%;
-
-    --card: 220 18% 12%;
-    --card-foreground: 210 20% 93%;
-
-    --popover: 220 18% 12%;
-    --popover-foreground: 210 20% 93%;
-
-    --primary: 215 85% 76%;
-    --primary-foreground: 220 20% 7%;
-
-    --secondary: 165 73% 71%;
-    --secondary-foreground: 220 20% 7%;
-
-    --muted: 220 15% 25%;
-    --muted-foreground: 220 10% 62%;
-
-    --accent: 215 85% 76%;
-    --accent-foreground: 220 20% 7%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
-    --ring: 215 85% 76%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
 }
 
 @layer base {
@@ -111,10 +69,8 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply text-foreground;
+    @apply bg-background text-foreground;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #0b0c10 0%, #111318 100%);
-    background-attachment: fixed;
   }
 
   html {
@@ -123,37 +79,17 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .glass-panel {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+  .card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .glass-nav {
-    background: rgba(11, 12, 16, 0.8);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .glow-accent {
-    box-shadow: 0 0 40px rgba(138, 180, 255, 0.15);
-  }
-
-  .glow-secondary {
-    box-shadow: 0 0 40px rgba(126, 240, 208, 0.15);
-  }
-
-  .card-tilt {
-    transform-style: preserve-3d;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .card-tilt:hover {
-    transform: perspective(1000px) rotateX(2deg) rotateY(-3deg) scale(1.02);
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #8ab4ff 0%, #7ef0d0 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -4,6 +4,10 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import Stats from "@/components/Stats";
+import Testimonials from "@/components/Testimonials";
+import Benefits from "@/components/Benefits";
+import Guarantee from "@/components/Guarantee";
 import level2Image from "@/assets/level-2-zip-track.jpg";
 import level1Image from "@/assets/level-1-wire-secured.jpg";
 import heroImage from "@/assets/hero-patio.png";
@@ -34,9 +38,12 @@ const Home = ({ onEstimateClick }: HomeProps) => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-slate-50">
       {/* Hero Section */}
-      <section className="pt-24 lg:pt-32 pb-12 lg:pb-20 px-4">
+      <section className="pt-24 lg:pt-32 pb-12 lg:pb-20 px-4 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent opacity-50 -z-10" />
+        
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div
@@ -45,8 +52,9 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                 heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Windproof Patio Blinds, Built for Southern California
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+                Windproof Patio Blinds, Built for{" "}
+                <span className="gradient-text">Southern California</span>
               </h1>
               <div className="space-y-2 text-muted-foreground">
                 <p className="text-lg">
@@ -69,42 +77,48 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                 </li>
               </ul>
               <div className="flex flex-wrap gap-3 pt-4">
-                <Button size="lg" onClick={onEstimateClick} className="transition-transform hover:scale-105">
+                <Button size="lg" onClick={onEstimateClick} className="transition-transform hover:scale-105 shadow-lg">
                   Contact Us — FREE Estimate
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   onClick={scrollToLocations}
-                  className="transition-transform hover:scale-105"
+                  className="transition-transform hover:scale-105 border-2"
                 >
                   See Locations <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground">
-                High-wind tested • Pro install • Warranty
+              <p className="text-sm text-muted-foreground pt-2">
+                ✓ Free on-site consultation  ✓ 2-3 day installation  ✓ Lifetime support
               </p>
             </div>
 
-            <div className="relative animate-float">
+            <div className="relative">
               <img
                 src={heroImage}
                 alt="Modern patio with windproof blinds"
-                className="rounded-3xl shadow-2xl w-full h-auto glow-accent"
+                className="rounded-3xl shadow-2xl w-full h-auto"
               />
-              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 glass-panel glow-secondary shadow-2xl animate-slide-up">
+              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 bg-white shadow-2xl border-2 border-blue-100 animate-slide-up">
                 <h3 className="font-bold text-lg mb-2">Bundle & Save</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Order 3+ save 5% • 5+ save 10% • 10+ save 15%
                 </p>
-                <Button variant="outline" size="sm" className="w-full">
-                  Check your savings →
+                <Button variant="default" size="sm" className="w-full bg-gradient-to-r from-blue-600 to-blue-500">
+                  Calculate Savings →
                 </Button>
               </Card>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Stats */}
+      <Stats />
+
+      {/* Benefits */}
+      <Benefits />
 
       {/* Products Section */}
       <section
@@ -122,7 +136,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <Card className="overflow-hidden group glass-panel card-tilt glow-accent">
+            <Card className="overflow-hidden group border-2 hover:border-primary card-hover">
               <img
                 src={level2Image}
                 alt="Level 2 Zip Track blinds"
@@ -151,7 +165,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
               </div>
             </Card>
 
-            <Card className="overflow-hidden group glass-panel card-tilt glow-secondary">
+            <Card className="overflow-hidden group border-2 hover:border-primary card-hover">
               <img
                 src={level1Image}
                 alt="Level 1 Wire Secured blinds"
@@ -183,10 +197,13 @@ const Home = ({ onEstimateClick }: HomeProps) => {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <Testimonials />
+
       {/* Process Section */}
       <section
         ref={processAnimation.elementRef}
-        className={`py-12 lg:py-20 px-4 bg-secondary/50 transition-all duration-700 ${
+        className={`py-12 lg:py-20 px-4 bg-white transition-all duration-700 ${
           processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -218,10 +235,10 @@ const Home = ({ onEstimateClick }: HomeProps) => {
             ].map((step, index) => (
               <Card
                 key={index}
-                className="p-6 glass-panel card-tilt glow-accent"
+                className="p-6 border-2 hover:border-primary card-hover bg-white"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mb-4 glow-accent">
+                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
                   {step.number}
                 </div>
                 <h3 className="font-bold text-lg mb-2">{step.title}</h3>
@@ -240,7 +257,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
         }`}
       >
         <div className="container mx-auto max-w-2xl">
-          <Card className="p-8 lg:p-12 glass-panel glow-secondary">
+          <Card className="p-8 lg:p-12 bg-white border-2 shadow-xl">
             <h2 className="text-3xl font-bold mb-6">Estimate Your Bundle Savings</h2>
             <div className="space-y-6">
               <div>
@@ -256,9 +273,9 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                   className="text-lg"
                 />
               </div>
-              <div className="glass-panel p-6 rounded-xl glow-accent">
+              <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-100">
                 <p className="text-2xl font-bold mb-2">
-                  Your discount: <span className="gradient-text">{discount}%</span>
+                  Your discount: <span className="text-primary">{discount}%</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Final pricing provided after a free on-site estimate.
@@ -268,6 +285,9 @@ const Home = ({ onEstimateClick }: HomeProps) => {
           </Card>
         </div>
       </section>
+
+      {/* Guarantee */}
+      <Guarantee onEstimateClick={onEstimateClick} />
 
       {/* Locations anchor for scroll */}
       <div id="locations-section" />

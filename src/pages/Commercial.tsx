@@ -99,7 +99,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
             ].map((project, index) => (
               <Card
                 key={index}
-                className="p-6 glass-panel card-tilt glow-accent"
+                className="p-6 border-2 hover:border-primary card-hover bg-white"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold mb-4">{project.title}</h3>
@@ -124,17 +124,12 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
       </section>
 
       {/* Specs & Options */}
-      <section
-        ref={specsAnimation.elementRef}
-        className={`py-12 lg:py-20 px-4 transition-all duration-700 ${
-          specsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
+      <section className="py-12 lg:py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">Specs & Options</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6 glass-panel card-tilt glow-accent">
+            <Card className="p-6 border-2 hover:border-primary card-hover bg-white">
               <h3 className="font-bold text-lg mb-4">Control Options</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Manual cordless operation</li>
@@ -145,7 +140,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6 glass-panel card-tilt glow-secondary">
+            <Card className="p-6 border-2 hover:border-primary card-hover bg-white">
               <h3 className="font-bold text-lg mb-4">Fabric & Finish</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Sunscreen (90-95% UV block, see-through)</li>
@@ -156,7 +151,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6 glass-panel card-tilt glow-accent">
+            <Card className="p-6 border-2 hover:border-primary card-hover bg-white">
               <h3 className="font-bold text-lg mb-4">Hardware</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Powder-coated aluminum tracks</li>
@@ -166,7 +161,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6 glass-panel card-tilt glow-secondary">
+            <Card className="p-6 border-2 hover:border-primary card-hover bg-white">
               <h3 className="font-bold text-lg mb-4">Service & Support</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Commercial warranty (5-10 years)</li>
@@ -177,6 +172,29 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
           </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="py-12 lg:py-16 px-4 bg-gradient-to-br from-slate-50 to-white border-t">
+        <div className="container mx-auto max-w-3xl">
+          <Card className="p-8 lg:p-12 text-center bg-white border-2 shadow-xl">
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready for Premium Patio Blinds?</h2>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              Large-scale projects, off-hours installation, and dedicated project management available.
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button size="lg" asChild className="hover:scale-105 transition-transform shadow-lg">
+                <a href="tel:6264304003">
+                  <Phone className="w-4 h-4 mr-2" />
+                  Call Commercial Sales
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" onClick={onEstimateClick} className="hover:scale-105 transition-transform border-2">
+                Request Bid
+              </Button>
+            </div>
+          </Card>
         </div>
       </section>
     </div>

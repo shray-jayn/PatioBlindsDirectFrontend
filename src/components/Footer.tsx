@@ -31,7 +31,7 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
                 variant="outline"
                 size="lg"
                 onClick={onEstimateClick}
-                className="border-[#D4AF78] text-white hover:bg-[#D4AF78] hover:text-[#1A2332] hover:scale-105 transition-all"
+                className="border-2 border-[#D4AF78] text-white hover:bg-[#D4AF78] hover:text-[#1A2332] hover:scale-105 transition-all"
               >
                 Request Free Estimate
               </Button>

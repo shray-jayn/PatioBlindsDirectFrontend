@@ -64,9 +64,12 @@ const Locations = () => {
       {/* Hero Section */}
       <section
         ref={heroAnimation.elementRef}
-        className={`py-12 lg:py-16 px-4 transition-all duration-700 ${
-          heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`py-12 lg:py-16 px-4 transition-all duration-700
+          ${
+            heroAnimation.isVisible
+              ? "opacity-100 translate-y-0"
+              : "sm:opacity-0 sm:translate-y-10" /* Always visible on mobile */
+          }`}
       >
         <div className="container mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 gold-badge rounded-full text-sm font-semibold mb-6">
@@ -74,11 +77,13 @@ const Locations = () => {
             40+ Cities Served
           </div>
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">
-            Serving All of <span className="gradient-text">Southern California</span>
+            Serving All of{" "}
+            <span className="gradient-text">Southern California</span>
           </h1>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Fast local service, professional installation, and lifetime support across Los Angeles, Orange County, San
-            Diego, Inland Empire, and beyond.
+            Fast local service, professional installation, and lifetime support
+            across Los Angeles, Orange County, San Diego, Inland Empire, and
+            beyond.
           </p>
 
           <div className="relative max-w-xl mx-auto">
@@ -105,15 +110,19 @@ const Locations = () => {
       {/* Cities Grid */}
       <section
         ref={gridAnimation.elementRef}
-        className={`py-12 px-4 transition-all duration-700 ${
-          gridAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
+        className={`py-12 px-4 transition-all duration-700
+          ${
+            gridAnimation.isVisible
+              ? "opacity-100 translate-y-0"
+              : "sm:opacity-0 sm:translate-y-10" /* Always visible on mobile */
+          }`}
       >
         <div className="container mx-auto">
           {/* Results count */}
           <div className="mb-6 text-center">
             <p className="text-muted-foreground">
-              Showing {filteredCities.length} {filteredCities.length === 1 ? "location" : "locations"}
+              Showing {filteredCities.length}{" "}
+              {filteredCities.length === 1 ? "location" : "locations"}
             </p>
           </div>
 
@@ -129,7 +138,9 @@ const Locations = () => {
                       <h3 className="font-bold text-lg mb-1 group-hover:text-primary transition-colors">
                         {city.name}
                       </h3>
-                      <p className="text-sm text-muted-foreground">{city.county}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {city.county}
+                      </p>
                     </div>
                     <div className="w-10 h-10 bg-[#D4AF78]/20 rounded-full flex items-center justify-center group-hover:bg-[#D4AF78] group-hover:text-white transition-all">
                       <MapPin className="w-5 h-5 text-[#1A2332] group-hover:text-white transition-colors" />
@@ -137,7 +148,7 @@ const Locations = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <a 
+                    <a
                       href="tel:6578955989"
                       className="block text-sm font-semibold text-[#D4AF78] hover:text-[#D4AF78]/80 transition-colors mb-3"
                     >
@@ -176,8 +187,12 @@ const Locations = () => {
               <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Search className="w-8 h-8 text-muted-foreground" />
               </div>
-              <p className="text-lg text-muted-foreground mb-2">No cities found matching "{searchQuery}"</p>
-              <p className="text-sm text-muted-foreground">Try searching by city or county name</p>
+              <p className="text-lg text-muted-foreground mb-2">
+                No cities found matching "{searchQuery}"
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Try searching by city or county name
+              </p>
             </div>
           )}
         </div>
@@ -186,7 +201,9 @@ const Locations = () => {
       {/* Coverage Areas */}
       <section className="py-12 lg:py-16 px-4 bg-slate-50">
         <div className="container mx-auto max-w-5xl">
-          <h2 className="text-3xl font-bold text-center mb-8">Complete Southern California Coverage</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Complete Southern California Coverage
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { name: "Los Angeles County", cities: "15+ cities" },
@@ -196,7 +213,10 @@ const Locations = () => {
               { name: "San Bernardino County", cities: "5+ cities" },
               { name: "Ventura & Santa Barbara", cities: "4+ cities" },
             ].map((county, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-lg transition-shadow">
+              <Card
+                key={index}
+                className="p-6 text-center hover:shadow-lg transition-shadow"
+              >
                 <h3 className="font-bold text-lg mb-2">{county.name}</h3>
                 <p className="text-sm text-muted-foreground">{county.cities}</p>
               </Card>
@@ -209,19 +229,30 @@ const Locations = () => {
       <section className="py-12 lg:py-16 px-4">
         <div className="container mx-auto max-w-3xl">
           <Card className="p-8 lg:p-12 text-center bg-gradient-to-br from-blue-50 to-white border-2 border-blue-100">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Don't See Your City?</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+              Don't See Your City?
+            </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              We serve throughout Southern California. Contact us to confirm service availability in your area and get
-              a free, no-obligation estimate.
+              We serve throughout Southern California. Contact us to confirm
+              service availability in your area and get a free, no-obligation
+              estimate.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button size="lg" asChild className="hover:scale-105 transition-transform">
+              <Button
+                size="lg"
+                asChild
+                className="hover:scale-105 transition-transform"
+              >
                 <a href="tel:6264304003">
                   <Phone className="w-4 h-4 mr-2" />
                   Call (626) 430-4003
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform border-2">
+              <Button
+                size="lg"
+                variant="outline"
+                className="hover:scale-105 transition-transform border-2"
+              >
                 Request Free Estimate
               </Button>
             </div>

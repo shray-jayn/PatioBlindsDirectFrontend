@@ -9,15 +9,15 @@ const Stats = () => {
   ];
 
   return (
-    <section className="py-12 lg:py-16 px-4 border-y border-border bg-white">
+    <section className="py-12 lg:py-16 px-4 border-y" style={{ borderColor: 'var(--border-light)', background: 'var(--surface)' }}>
       <div className="container mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-[#C6A66B]/20 rounded-full mb-3">
-              <stat.icon className="w-6 h-6 text-[#2B3856]" />
+            <div className="inline-flex items-center justify-center w-12 h-12 bg-[#D4AF78]/10 rounded-full mb-3">
+              <stat.icon className="w-6 h-6 text-[#1A2332]" />
             </div>
-              <div className="text-3xl lg:text-4xl font-bold text-[#2B3856] mb-1">{stat.value}</div>
+            <div className="text-3xl lg:text-4xl font-bold text-[#1A2332] mb-1">{stat.value}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>
             </div>
           ))}

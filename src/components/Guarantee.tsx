@@ -65,11 +65,11 @@ const Guarantee = ({ onEstimateClick }: GuaranteeProps) => {
           <Button
             size="lg"
             onClick={onEstimateClick}
-            className="bg-[#C6A66B] text-[#2B3856] hover:bg-[#D4B884] hover:scale-105 transition-all shadow-xl font-semibold"
+            className="btn-gold hover:scale-105 transition-all shadow-xl"
           >
             Get Your Free Estimate Now
           </Button>
-          <p className="text-sm text-[#D5D5D5] mt-4">
+          <p className="text-sm text-[#C4C4C4] mt-4">
             ✓ No obligation  ✓ Free on-site visit  ✓ Same-day quote
           </p>
         </div>

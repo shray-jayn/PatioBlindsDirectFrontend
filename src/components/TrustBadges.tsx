@@ -12,8 +12,8 @@ const TrustBadges = () => {
     <div className="flex flex-wrap justify-center gap-6 py-6">
       {badges.map((badge, index) => (
         <div key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-          <div className="w-8 h-8 bg-[#C6A66B]/20 rounded-full flex items-center justify-center">
-            <badge.icon className="w-4 h-4 text-[#2B3856]" />
+          <div className="w-8 h-8 bg-[#D4AF78]/10 rounded-full flex items-center justify-center">
+            <badge.icon className="w-4 h-4 text-[#1A2332]" />
           </div>
           <span className="font-medium">{badge.text}</span>
         </div>

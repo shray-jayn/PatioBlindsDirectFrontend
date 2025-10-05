@@ -29,9 +29,10 @@ const Testimonials = () => {
   return (
     <section
       ref={animation.elementRef}
-      className={`py-12 lg:py-20 px-4 bg-white transition-all duration-700 ${
+      className={`py-12 lg:py-20 px-4 transition-all duration-700 ${
         animation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
+      style={{ background: 'var(--bg-secondary)' }}
     >
       <div className="container mx-auto">
         <div className="text-center mb-12">

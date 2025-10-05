@@ -131,8 +131,8 @@ const Locations = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">{city.county}</p>
                     </div>
-                    <div className="w-10 h-10 bg-[#C6A66B]/20 rounded-full flex items-center justify-center group-hover:bg-[#C6A66B] group-hover:text-white transition-all">
-                      <MapPin className="w-5 h-5 text-[#2B3856] group-hover:text-white transition-colors" />
+                    <div className="w-10 h-10 bg-[#D4AF78]/20 rounded-full flex items-center justify-center group-hover:bg-[#D4AF78] group-hover:text-white transition-all">
+                      <MapPin className="w-5 h-5 text-[#1A2332] group-hover:text-white transition-colors" />
                     </div>
                   </div>
 
@@ -150,7 +150,7 @@ const Locations = () => {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="w-full text-primary hover:bg-[#C6A66B]/10 group"
+                      className="w-full text-primary hover:bg-[#D4AF78]/10 group"
                     >
                       Learn More
                       <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -159,7 +159,7 @@ const Locations = () => {
                 </div>
 
                 {/* Decorative element */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#C6A66B]/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-[#D4AF78]/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </Card>
             ))}
           </div>

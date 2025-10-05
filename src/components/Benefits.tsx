@@ -60,8 +60,8 @@ const Benefits = () => {
               className="p-6 card-hover bg-white border-2 text-center"
               style={{ animationDelay: `${index * 50}ms` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-indigo-50 rounded-2xl mb-4">
-                <benefit.icon className="w-8 h-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-[#C6A66B]/20 rounded-2xl mb-4">
+                <benefit.icon className="w-8 h-8 text-[#2B3856]" />
               </div>
               <h3 className="font-bold text-xl mb-2">{benefit.title}</h3>
               <p className="text-muted-foreground text-sm">{benefit.description}</p>

@@ -29,13 +29,13 @@ const Testimonials = () => {
   return (
     <section
       ref={animation.elementRef}
-      className={`py-12 lg:py-20 px-4 bg-slate-50 transition-all duration-700 ${
+      className={`py-12 lg:py-20 px-4 bg-white transition-all duration-700 ${
         animation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 gold-badge rounded-full text-sm font-semibold mb-4">
             <Star className="w-4 h-4 fill-current" />
             5.0 Average Rating
           </div>

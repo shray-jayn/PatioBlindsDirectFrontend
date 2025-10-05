@@ -8,38 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    --background: 40 14% 97%;
+    --foreground: 0 0% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 0 0% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 234 89% 54%;
+    --primary: 220 34% 24%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 219 18% 37%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 214 32% 91%;
-    --muted-foreground: 215 16% 47%;
+    --accent: 37 29% 59%;
+    --accent-foreground: 0 0% 10%;
 
-    --accent: 234 89% 54%;
-    --accent-foreground: 0 0% 100%;
+    --muted: 213 9% 47%;
+    --muted-foreground: 213 9% 47%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 234 89% 54%;
+    --border: 60 4% 89%;
+    --input: 60 4% 89%;
+    --ring: 220 34% 24%;
 
     --radius: 0.75rem;
     
     /* Premium design tokens */
-    --gradient-primary: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%);
+    --brand: #2B3856;
+    --brand-light: #4E5A75;
+    --gold-accent: #C6A66B;
+    --footer-bg: #111418;
+    --gradient-primary: linear-gradient(135deg, #2B3856 0%, #4E5A75 100%);
+    --gradient-gold: linear-gradient(135deg, #C6A66B 0%, #D4B884 100%);
     --shadow-elegant: 0 1px 3px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.03);
     --shadow-premium: 0 20px 40px rgba(0, 0, 0, 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -89,10 +94,19 @@ All colors MUST be HSL.
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+    background: linear-gradient(135deg, #C6A66B 0%, #D4B884 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  .gold-badge {
+    background: linear-gradient(135deg, #C6A66B 0%, #D4B884 100%);
+    color: #2B3856;
+  }
+  
+  .premium-card {
+    background: linear-gradient(135deg, #2B3856 0%, #4E5A75 100%);
   }
 
   .animate-fade-in {

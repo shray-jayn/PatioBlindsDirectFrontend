@@ -118,9 +118,17 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
         </div>
       </div>
 
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div 
+          className="md:hidden fixed inset-0 top-16 lg:top-20 bg-black/50 z-40"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed inset-0 top-16 lg:top-20 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`md:hidden fixed inset-y-0 right-0 top-16 lg:top-20 w-full sm:w-80 bg-white shadow-2xl z-50 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

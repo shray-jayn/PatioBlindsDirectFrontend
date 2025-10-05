@@ -23,8 +23,8 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background shadow-md" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled ? "glass-nav shadow-2xl" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 lg:px-8">
@@ -80,11 +80,15 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
           </div>
 
           <div className="flex items-center gap-3">
-            <a href="tel:6264304003" className="hidden sm:flex items-center gap-2 text-sm font-medium">
+            <a href="tel:6264304003" className="hidden sm:flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
               (626) 430-4003
             </a>
-            <Button onClick={onEstimateClick} size="sm" className="font-medium">
+            <Button 
+              onClick={onEstimateClick} 
+              size="sm" 
+              className="font-medium bg-gradient-to-r from-primary to-secondary hover:shadow-lg hover:scale-105 transition-all"
+            >
               Contact Us — FREE Estimate
             </Button>
           </div>

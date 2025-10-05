@@ -99,7 +99,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
             ].map((project, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="p-6 glass-panel card-tilt glow-accent"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold mb-4">{project.title}</h3>
@@ -134,7 +134,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
           <h2 className="text-3xl lg:text-4xl font-bold mb-8 text-center">Specs & Options</h2>
 
           <div className="grid md:grid-cols-2 gap-6">
-            <Card className="p-6">
+            <Card className="p-6 glass-panel card-tilt glow-accent">
               <h3 className="font-bold text-lg mb-4">Control Options</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Manual cordless operation</li>
@@ -145,7 +145,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6">
+            <Card className="p-6 glass-panel card-tilt glow-secondary">
               <h3 className="font-bold text-lg mb-4">Fabric & Finish</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Sunscreen (90-95% UV block, see-through)</li>
@@ -156,7 +156,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6">
+            <Card className="p-6 glass-panel card-tilt glow-accent">
               <h3 className="font-bold text-lg mb-4">Hardware</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Powder-coated aluminum tracks</li>
@@ -166,7 +166,7 @@ const Commercial = ({ onEstimateClick }: CommercialProps) => {
               </ul>
             </Card>
 
-            <Card className="p-6">
+            <Card className="p-6 glass-panel card-tilt glow-secondary">
               <h3 className="font-bold text-lg mb-4">Service & Support</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Commercial warranty (5-10 years)</li>

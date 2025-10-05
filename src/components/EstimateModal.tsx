@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { X, Sparkles } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -6,6 +6,7 @@ import { Label } from "./ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 import { useState } from "react";
 import { toast } from "sonner";
+import confetti from "canvas-confetti";
 
 interface EstimateModalProps {
   isOpen: boolean;
@@ -26,7 +27,19 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you! We'll contact you soon.");
+    
+    // Confetti celebration
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ["#8ab4ff", "#7ef0d0", "#ffffff"],
+    });
+    
+    toast.success("Thank you! We'll contact you soon.", {
+      icon: <Sparkles className="w-4 h-4" />,
+    });
+    
     onClose();
     setFormData({
       name: "",
@@ -39,8 +52,8 @@ const EstimateModal = ({ isOpen, onClose }: EstimateModalProps) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 animate-fade-in">
-      <div className="bg-background rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fade-in">
+      <div className="glass-panel rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto glow-accent animate-scale-in">
         <div className="p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold">Request Free Estimate</h2>

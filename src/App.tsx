@@ -7,6 +7,9 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import EstimateModal from "./components/EstimateModal";
+import ScrollProgress from "./components/ScrollProgress";
+import FloatingCallButton from "./components/FloatingCallButton";
+import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import Commercial from "./pages/Commercial";
 import Locations from "./pages/Locations";
@@ -22,10 +25,13 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Sonner />
+        <Sonner position="top-right" />
         <BrowserRouter>
+          <ScrollProgress />
           <Navbar onEstimateClick={() => setIsModalOpen(true)} />
           <EstimateModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+          <FloatingCallButton />
+          <BackToTop />
           <Routes>
             <Route path="/" element={<Home onEstimateClick={() => setIsModalOpen(true)} />} />
             <Route path="/products" element={<Home onEstimateClick={() => setIsModalOpen(true)} />} />

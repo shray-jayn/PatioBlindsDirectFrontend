@@ -90,12 +90,12 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
         }`}
       >
         <div className="container mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-4" defaultValue="item-0">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="border rounded-xl px-6 bg-card hover:shadow-md transition-shadow"
+                className="glass-panel rounded-xl px-6 hover:glow-accent transition-all"
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline py-4">
                   {faq.question}

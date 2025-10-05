@@ -86,13 +86,13 @@ const Home = ({ onEstimateClick }: HomeProps) => {
               </p>
             </div>
 
-            <div className="relative">
+            <div className="relative animate-float">
               <img
                 src={heroImage}
                 alt="Modern patio with windproof blinds"
-                className="rounded-3xl shadow-2xl w-full h-auto"
+                className="rounded-3xl shadow-2xl w-full h-auto glow-accent"
               />
-              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 bg-background/95 backdrop-blur-sm shadow-xl animate-slide-up">
+              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 glass-panel glow-secondary shadow-2xl animate-slide-up">
                 <h3 className="font-bold text-lg mb-2">Bundle & Save</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Order 3+ save 5% • 5+ save 10% • 10+ save 15%
@@ -122,7 +122,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="overflow-hidden group glass-panel card-tilt glow-accent">
               <img
                 src={level2Image}
                 alt="Level 2 Zip Track blinds"
@@ -151,7 +151,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
               </div>
             </Card>
 
-            <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card className="overflow-hidden group glass-panel card-tilt glow-secondary">
               <img
                 src={level1Image}
                 alt="Level 1 Wire Secured blinds"
@@ -218,10 +218,10 @@ const Home = ({ onEstimateClick }: HomeProps) => {
             ].map((step, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                className="p-6 glass-panel card-tilt glow-accent"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mb-4 glow-accent">
                   {step.number}
                 </div>
                 <h3 className="font-bold text-lg mb-2">{step.title}</h3>
@@ -240,7 +240,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
         }`}
       >
         <div className="container mx-auto max-w-2xl">
-          <Card className="p-8 lg:p-12">
+          <Card className="p-8 lg:p-12 glass-panel glow-secondary">
             <h2 className="text-3xl font-bold mb-6">Estimate Your Bundle Savings</h2>
             <div className="space-y-6">
               <div>
@@ -256,9 +256,9 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                   className="text-lg"
                 />
               </div>
-              <div className="bg-secondary/50 p-6 rounded-xl">
+              <div className="glass-panel p-6 rounded-xl glow-accent">
                 <p className="text-2xl font-bold mb-2">
-                  Your discount: <span className="text-primary">{discount}%</span>
+                  Your discount: <span className="gradient-text">{discount}%</span>
                 </p>
                 <p className="text-sm text-muted-foreground">
                   Final pricing provided after a free on-site estimate.

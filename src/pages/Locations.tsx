@@ -65,7 +65,7 @@ const Locations = () => {
             {filteredCities.map((city, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group"
+                className="p-6 glass-panel card-tilt glow-accent group"
               >
                 <div className="flex items-start gap-3 mb-4">
                   <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />

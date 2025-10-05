@@ -35,7 +35,7 @@ const Testimonials = () => {
     >
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-amber-50 text-amber-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-4">
             <Star className="w-4 h-4 fill-current" />
             5.0 Average Rating
           </div>

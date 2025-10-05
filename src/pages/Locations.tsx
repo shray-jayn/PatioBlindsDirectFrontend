@@ -69,7 +69,7 @@ const Locations = () => {
         }`}
       >
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 text-indigo-700 rounded-full text-sm font-medium mb-6">
             <MapPin className="w-4 h-4" />
             40+ Cities Served
           </div>
@@ -131,7 +131,7 @@ const Locations = () => {
                       </h3>
                       <p className="text-sm text-muted-foreground">{city.county}</p>
                     </div>
-                    <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                    <div className="w-10 h-10 bg-indigo-50 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
                       <MapPin className="w-5 h-5" />
                     </div>
                   </div>
@@ -150,7 +150,7 @@ const Locations = () => {
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="w-full text-primary hover:bg-blue-50 group"
+                      className="w-full text-primary hover:bg-indigo-50 group"
                     >
                       Learn More
                       <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -159,7 +159,7 @@ const Locations = () => {
                 </div>
 
                 {/* Decorative element */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-100 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-indigo-100 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity" />
               </Card>
             ))}
           </div>

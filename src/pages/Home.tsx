@@ -42,7 +42,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
       {/* Hero Section */}
       <section className="pt-24 lg:pt-32 pb-12 lg:pb-20 px-4 relative overflow-hidden">
         {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 to-transparent opacity-50 -z-10" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-indigo-50 to-transparent opacity-50 -z-10" />
         
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -100,12 +100,12 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                 alt="Modern patio with windproof blinds"
                 className="rounded-3xl shadow-2xl w-full h-auto"
               />
-              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 bg-white shadow-2xl border-2 border-blue-100 animate-slide-up">
+              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 bg-white shadow-2xl border-2 border-indigo-100 animate-slide-up">
                 <h3 className="font-bold text-lg mb-2">Bundle & Save</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   Order 3+ save 5% • 5+ save 10% • 10+ save 15%
                 </p>
-                <Button variant="default" size="sm" className="w-full bg-gradient-to-r from-blue-600 to-blue-500">
+                <Button variant="default" size="sm" className="w-full">
                   Calculate Savings →
                 </Button>
               </Card>
@@ -273,7 +273,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                   className="text-lg"
                 />
               </div>
-              <div className="bg-blue-50 p-6 rounded-xl border-2 border-blue-100">
+              <div className="bg-indigo-50 p-6 rounded-xl border-2 border-indigo-100">
                 <p className="text-2xl font-bold mb-2">
                   Your discount: <span className="text-primary">{discount}%</span>
                 </p>

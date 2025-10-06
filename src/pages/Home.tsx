@@ -61,7 +61,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
               </h1>
               <p className="text-lg lg:text-xl text-muted leading-relaxed max-w-xl">
                 Choose our <span className="font-bold text-foreground">Level 2 Zip Track</span> (100% windproof, up to 30 ft) or{" "}
-                <span className="font-bold text-foreground">Level 1 Wire Secured</span> blinds—ideal for alumawood covers.
+                <span className="font-bold text-foreground">Level 1 Wire Secured</span> blinds ideal for alumawood covers.
               </p>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 text-base lg:text-lg text-foreground">

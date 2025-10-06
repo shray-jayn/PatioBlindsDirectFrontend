@@ -8,7 +8,11 @@ import { Link } from "react-router-dom";
 import { locations } from "@/data/locations";
 
 // Get all cities from locations data
-const cities = locations.map(loc => ({ name: loc.name, county: loc.county, slug: loc.slug }));
+const cities = locations.map((loc) => ({
+  name: loc.name,
+  county: loc.county,
+  slug: loc.slug,
+}));
 
 const Locations = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -115,7 +119,7 @@ const Locations = () => {
                       className="block text-sm font-semibold text-[#D4AF78] hover:text-[#D4AF78]/80 transition-colors mb-3"
                     >
                       <Phone className="w-3.5 h-3.5 inline mr-1.5" />
-                      (657) 895-5989
+                      (626) 430-4003
                     </a>
                     <Button
                       size="sm"

@@ -36,7 +36,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-[40px] left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-border"
           : "bg-white/80 backdrop-blur-sm"
@@ -157,7 +157,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
         role="dialog"
         aria-modal="true"
         aria-label="Mobile menu"
-        className={`fixed top-0 right-0 z-[101] md:hidden h-dvh w-screen max-w-sm bg-white shadow-2xl
+        className={`fixed top-[104px] right-0 z-[101] md:hidden h-[calc(100dvh-104px)] w-screen max-w-sm bg-white shadow-2xl
                     transition-transform duration-300 ease-in-out
                     ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >

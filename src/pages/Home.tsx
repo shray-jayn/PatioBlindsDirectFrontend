@@ -8,6 +8,7 @@ import Stats from "@/components/Stats";
 import Testimonials from "@/components/Testimonials";
 import Benefits from "@/components/Benefits";
 import Guarantee from "@/components/Guarantee";
+import HeroTrustBadges from "@/components/HeroTrustBadges";
 import level2Image from "@/assets/level-2-zip-track.jpg";
 import level1Image from "@/assets/level-1-wire-secured.jpg";
 import heroImage from "@/assets/hero-patio.png";
@@ -40,7 +41,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
   return (
     <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       {/* Hero Section */}
-      <section className="pt-24 lg:pt-32 pb-12 lg:pb-20 px-4 relative overflow-hidden">
+      <section className="pt-32 lg:pt-40 pb-12 lg:pb-20 px-4 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#D4AF78]/10 to-transparent opacity-50 -z-10" />
         
@@ -52,9 +53,14 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                 heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
+              <div className="inline-block mb-4 px-4 py-2 rounded-full bg-[#D4AF78]/10 border border-[#D4AF78]/30">
+                <span className="text-sm font-semibold text-[#1A2332]">
+                  🏆 #1 Rated Patio Blind Installer in Southern California
+                </span>
+              </div>
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-                Windproof Patio Blinds, Built for{" "}
-                <span className="gradient-text">Southern California</span>
+                Premium Windproof Patio Blinds,{" "}
+                <span className="gradient-text">Built to Last</span>
               </h1>
               <div className="space-y-2 text-muted-foreground">
                 <p className="text-lg">
@@ -113,6 +119,9 @@ const Home = ({ onEstimateClick }: HomeProps) => {
           </div>
         </div>
       </section>
+
+      {/* Trust Badges */}
+      <HeroTrustBadges />
 
       {/* Stats */}
       <Stats />

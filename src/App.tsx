@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import TrustBar from "./components/TrustBar";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import EstimateModal from "./components/EstimateModal";
@@ -39,6 +40,7 @@ const App = () => {
         <BrowserRouter>
           <ScrollToTop />
           <ScrollProgress />
+          <TrustBar />
           <Navbar onEstimateClick={() => setIsModalOpen(true)} />
           <EstimateModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
           <FloatingCallButton />

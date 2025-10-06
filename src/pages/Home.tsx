@@ -120,9 +120,7 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                   <p className="text-sm text-muted leading-relaxed">
                     Order 3+ save 5% • 5+ save 10% • 10+ save 15%
                   </p>
-                  <Button variant="gold" size="sm" className="w-full">
-                    Calculate Savings →
-                  </Button>
+                  
                 </div>
               </Card>
             </div>

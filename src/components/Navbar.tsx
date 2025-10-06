@@ -66,7 +66,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
             >
               Products
             </Link>
-            <Link
+            {/* <Link
               to="/how-it-works"
               className={`text-sm font-medium transition-colors hover:text-primary ${
                 isActive("/how-it-works")
@@ -75,7 +75,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
               }`}
             >
               How it Works
-            </Link>
+            </Link> */}
             <Link
               to="/commercial"
               className={`text-sm font-medium transition-colors hover:text-primary ${

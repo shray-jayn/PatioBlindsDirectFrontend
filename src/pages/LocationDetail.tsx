@@ -268,31 +268,6 @@ const LocationDetail = ({ onEstimateClick }: LocationDetailProps) => {
         </div>
       </section>
 
-      {/* Footer Contact Info */}
-      <section className="py-8 px-4 bg-white border-t">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center text-sm text-muted-foreground space-y-2">
-            <p className="font-bold text-foreground text-lg mb-4">Patio Blinds Direct</p>
-            <p>© 2025 patioblindsdirect.com</p>
-            <p>Serving all Southern California</p>
-            <Link to="/locations" className="text-primary hover:underline block">
-              See all locations
-            </Link>
-            <div className="pt-4 space-y-1">
-              <p className="flex items-center justify-center gap-2">
-                <Phone className="w-4 h-4" />
-                <a href="tel:6264304003" className="hover:text-primary">(626) 430-4003</a>
-              </p>
-              <p className="flex items-center justify-center gap-2">
-                <Mail className="w-4 h-4" />
-                <a href="mailto:hello@patioblindsdirect.com" className="hover:text-primary">
-                  hello@patioblindsdirect.com
-                </a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

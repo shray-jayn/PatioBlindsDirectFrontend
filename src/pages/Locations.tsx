@@ -7,46 +7,8 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Link } from "react-router-dom";
 import { locations } from "@/data/locations";
 
-// Get cities from locations data and add additional cities without detail pages
-const cities = [
-  ...locations.map(loc => ({ name: loc.name, county: loc.county, slug: loc.slug })),
-  { name: "Glendale", county: "Los Angeles County", slug: "" },
-  { name: "Burbank", county: "Los Angeles County", slug: "" },
-  { name: "Santa Monica", county: "Los Angeles County", slug: "" },
-  { name: "Beverly Hills", county: "Los Angeles County", slug: "" },
-  { name: "West Hollywood", county: "Los Angeles County", slug: "" },
-  { name: "Culver City", county: "Los Angeles County", slug: "" },
-  { name: "Torrance", county: "Los Angeles County", slug: "" },
-  { name: "Long Beach", county: "Los Angeles County", slug: "" },
-  { name: "Anaheim", county: "Orange County", slug: "" },
-  { name: "Costa Mesa", county: "Orange County", slug: "" },
-  { name: "Newport Beach", county: "Orange County", slug: "" },
-  { name: "Huntington Beach", county: "Orange County", slug: "" },
-  { name: "Carlsbad", county: "San Diego County", slug: "" },
-  { name: "Encinitas", county: "San Diego County", slug: "" },
-  { name: "La Jolla", county: "San Diego County", slug: "" },
-  { name: "Del Mar", county: "San Diego County", slug: "" },
-  { name: "Riverside", county: "Riverside County", slug: "" },
-  { name: "Corona", county: "Riverside County", slug: "" },
-  { name: "Temecula", county: "Riverside County", slug: "" },
-  { name: "Murrieta", county: "Riverside County", slug: "" },
-  { name: "Palm Springs", county: "Riverside County", slug: "" },
-  { name: "Palm Desert", county: "Riverside County", slug: "" },
-  { name: "Rancho Mirage", county: "Riverside County", slug: "" },
-  { name: "Indio", county: "Riverside County", slug: "" },
-  { name: "La Quinta", county: "Riverside County", slug: "" },
-  { name: "Coachella", county: "Riverside County", slug: "" },
-  { name: "San Bernardino", county: "San Bernardino County", slug: "" },
-  { name: "Redlands", county: "San Bernardino County", slug: "" },
-  { name: "Fontana", county: "San Bernardino County", slug: "" },
-  { name: "Chino", county: "San Bernardino County", slug: "" },
-  { name: "Ontario", county: "San Bernardino County", slug: "" },
-  { name: "Santa Barbara", county: "Santa Barbara County", slug: "" },
-  { name: "Ventura", county: "Ventura County", slug: "" },
-  { name: "Oxnard", county: "Ventura County", slug: "" },
-  { name: "Thousand Oaks", county: "Ventura County", slug: "" },
-  { name: "Simi Valley", county: "Ventura County", slug: "" },
-];
+// Get all cities from locations data
+const cities = locations.map(loc => ({ name: loc.name, county: loc.county, slug: loc.slug }));
 
 const Locations = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -165,31 +127,17 @@ const Locations = () => {
                         Call Now
                       </a>
                     </Button>
-                    {city.slug ? (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="w-full border-2 hover:bg-[#D4AF78]/10"
-                        asChild
-                      >
-                        <Link to={`/locations/${city.slug}`}>
-                          Learn More
-                          <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </Button>
-                    ) : (
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="w-full border-2 hover:bg-[#D4AF78]/10"
-                        asChild
-                      >
-                        <a href="tel:6264304003">
-                          Call for Info
-                          <Phone className="w-4 h-4 ml-1" />
-                        </a>
-                      </Button>
-                    )}
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="w-full border-2 hover:bg-[#D4AF78]/10"
+                      asChild
+                    >
+                      <Link to={`/locations/${city.slug}`}>
+                        Learn More
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </Button>
                   </div>
                 </div>
 

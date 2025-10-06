@@ -14,6 +14,7 @@ import BackToTop from "./components/BackToTop";
 import Home from "./pages/Home";
 import Commercial from "./pages/Commercial";
 import Locations from "./pages/Locations";
+import LocationDetail from "./pages/LocationDetail";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -51,6 +52,7 @@ const App = () => {
             <Route path="/how-it-works" element={<Home onEstimateClick={() => setIsModalOpen(true)} />} />
             <Route path="/commercial" element={<Commercial onEstimateClick={() => setIsModalOpen(true)} />} />
             <Route path="/locations" element={<Locations />} />
+            <Route path="/locations/:city" element={<LocationDetail onEstimateClick={() => setIsModalOpen(true)} />} />
             <Route path="/faq" element={<FAQ onEstimateClick={() => setIsModalOpen(true)} />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

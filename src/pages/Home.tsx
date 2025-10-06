@@ -39,81 +39,91 @@ const Home = ({ onEstimateClick }: HomeProps) => {
   };
 
   return (
-    <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
+    <div className="min-h-screen bg-[#F7F6F2]">
       {/* Hero Section */}
-      <section className="pt-32 lg:pt-40 pb-12 lg:pb-20 px-4 relative overflow-hidden">
-        {/* Background decoration */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#D4AF78]/10 to-transparent opacity-50 -z-10" />
-        
+      <section className="pt-32 lg:pt-40 pb-16 lg:pb-24 px-4 relative overflow-hidden bg-dawn">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div
               ref={heroAnimation.elementRef}
-              className={`space-y-6 transition-all duration-700 ${
+              className={`space-y-8 transition-all duration-700 ${
                 heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
-              <div className="inline-block mb-4 px-4 py-2 rounded-full bg-[#D4AF78]/10 border border-[#D4AF78]/30">
-                <span className="text-sm font-semibold text-[#1A2332]">
-                  🏆 #1 Rated Patio Blind Installer in Southern California
+              <div className="trust-badge">
+                <span className="text-sm font-bold tracking-wide">
+                  #1 Rated in Southern California
                 </span>
               </div>
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
+              <h1 className="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight mb-6">
                 Premium Windproof Patio Blinds,{" "}
                 <span className="gradient-text">Built to Last</span>
               </h1>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="text-lg">
-                  Choose our <span className="font-semibold text-foreground">Level 2 Zip Track</span> (100% windproof, up to 30 ft) or{" "}
-                  <span className="font-semibold text-foreground">Level 1 Wire Secured</span> blinds ideal for alumawood covers.
-                </p>
-              </div>
-              <ul className="space-y-2">
-                <li className="flex items-center gap-2 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+              <p className="text-lg lg:text-xl text-muted leading-relaxed max-w-xl">
+                Choose our <span className="font-bold text-foreground">Level 2 Zip Track</span> (100% windproof, up to 30 ft) or{" "}
+                <span className="font-bold text-foreground">Level 1 Wire Secured</span> blinds—ideal for alumawood covers.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-center gap-3 text-base lg:text-lg text-foreground">
+                  <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0" />
                   Manual cordless, motorized & smart-home ready
                 </li>
-                <li className="flex items-center gap-2 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-3 text-base lg:text-lg text-foreground">
+                  <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0" />
                   Fast local install. Lifetime craftsmanship support
                 </li>
-                <li className="flex items-center gap-2 text-muted-foreground">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
+                <li className="flex items-center gap-3 text-base lg:text-lg text-foreground">
+                  <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0" />
                   Serving cities across Southern California
                 </li>
               </ul>
-              <div className="flex flex-wrap gap-3 pt-4">
-                <Button size="lg" onClick={onEstimateClick} className="transition-transform hover:scale-105 shadow-lg">
+              <div className="flex flex-wrap gap-4 pt-6">
+                <Button size="lg" onClick={onEstimateClick} className="pulse-ring hover-scale">
                   Contact Us — FREE Estimate
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   onClick={scrollToLocations}
-                  className="transition-transform hover:scale-105 border-2"
+                  className="hover-scale"
                 >
                   See Locations <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>
-              <p className="text-sm text-muted-foreground pt-2">
-                ✓ Free on-site consultation  ✓ 2-3 day installation  ✓ Lifetime support
-              </p>
+              <div className="flex flex-wrap gap-6 pt-4 text-sm text-muted">
+                <span className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#5E8F74]" />
+                  Free consultation
+                </span>
+                <span className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#5E8F74]" />
+                  2-3 day install
+                </span>
+                <span className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-[#5E8F74]" />
+                  Lifetime support
+                </span>
+              </div>
             </div>
 
-            <div className="relative">
-              <img
-                src={heroImage}
-                alt="Modern patio with windproof blinds"
-                className="rounded-3xl shadow-2xl w-full h-auto"
-              />
-              <Card className="absolute bottom-4 right-4 left-4 lg:left-auto lg:w-80 p-6 surface-card border-2 border-[#D4AF78] animate-slide-up">
-                <h3 className="font-bold text-lg mb-2">Bundle & Save</h3>
-                <p className="text-sm text-muted-foreground mb-3">
-                  Order 3+ save 5% • 5+ save 10% • 10+ save 15%
-                </p>
-                <Button variant="default" size="sm" className="w-full">
-                  Calculate Savings →
-                </Button>
+            <div className="relative parallax-slow">
+              <div className="relative overflow-hidden rounded-[24px] border-2 border-[#E6E1D8] shadow-[0_30px_80px_rgba(18,20,23,0.16)]">
+                <img
+                  src={heroImage}
+                  alt="Modern patio with windproof blinds"
+                  className="w-full h-auto"
+                />
+              </div>
+              <Card className="absolute bottom-6 right-6 left-6 lg:left-auto lg:w-[340px] p-6 glass-card border-2 border-[#D8B878]/30 backdrop-blur-lg animate-float">
+                <div className="space-y-4">
+                  <h3 className="font-black text-xl tracking-tight">Bundle & Save</h3>
+                  <p className="text-sm text-muted leading-relaxed">
+                    Order 3+ save 5% • 5+ save 10% • 10+ save 15%
+                  </p>
+                  <Button variant="gold" size="sm" className="w-full">
+                    Calculate Savings →
+                  </Button>
+                </div>
               </Card>
             </div>
           </div>
@@ -132,72 +142,78 @@ const Home = ({ onEstimateClick }: HomeProps) => {
       {/* Products Section */}
       <section
         ref={productsAnimation.elementRef}
-        className={`py-12 lg:py-20 px-4 transition-all duration-700 ${
+        className={`py-20 lg:py-32 px-4 bg-white transition-all duration-700 ${
           productsAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-4">Two Proven Systems, One Perfect Fit</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16 lg:mb-20 space-y-4">
+            <h2 className="text-4xl lg:text-6xl font-black tracking-tight">
+              Two Proven Systems, One Perfect Fit
+            </h2>
+            <p className="text-lg lg:text-xl text-muted max-w-2xl mx-auto leading-relaxed">
               Every patio is different. We'll recommend the best system for your space, goals, and wind exposure.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-            <Card className="overflow-hidden group border-2 hover:border-primary card-hover">
-              <img
-                src={level2Image}
-                alt="Level 2 Zip Track blinds"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 lg:p-8">
-                <h3 className="text-2xl font-bold mb-4">Level 2 Zip Track</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>100% windproof seal with side tracks</span>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
+            <Card className="overflow-hidden group border-2 border-border hover:border-[#D8B878] hover:shadow-[0_30px_80px_rgba(18,20,23,0.16)] hover:-translate-y-1 transition-all duration-500">
+              <div className="relative overflow-hidden h-80">
+                <img
+                  src={level2Image}
+                  alt="Level 2 Zip Track blinds"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-8 lg:p-10">
+                <h3 className="text-3xl font-black mb-6 tracking-tight">Level 2 Zip Track</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">100% windproof seal with side tracks</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Spans up to 30 feet in a single run</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Spans up to 30 feet in a single run</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Best for stucco & exposed patios</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Best for stucco & exposed patios</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Manual or motorized (smart-home ready)</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Manual or motorized (smart-home ready)</span>
                   </li>
                 </ul>
               </div>
             </Card>
 
-            <Card className="overflow-hidden group border-2 hover:border-primary card-hover">
-              <img
-                src={level1Image}
-                alt="Level 1 Wire Secured blinds"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6 lg:p-8">
-                <h3 className="text-2xl font-bold mb-4">Level 1 Wire Secured</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Discrete wire guides, clean look</span>
+            <Card className="overflow-hidden group border-2 border-border hover:border-[#D8B878] hover:shadow-[0_30px_80px_rgba(18,20,23,0.16)] hover:-translate-y-1 transition-all duration-500">
+              <div className="relative overflow-hidden h-80">
+                <img
+                  src={level1Image}
+                  alt="Level 1 Wire Secured blinds"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+              <div className="p-8 lg:p-10">
+                <h3 className="text-3xl font-black mb-6 tracking-tight">Level 1 Wire Secured</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Discrete wire guides, clean look</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Ideal for alumawood roll hides between ridges</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Ideal for alumawood—roll hides between ridges</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Excellent wind resistance</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Excellent wind resistance</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>Manual cordless or motorized</span>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-[#D8B878] flex-shrink-0 mt-0.5" />
+                    <span className="text-base">Manual cordless or motorized</span>
                   </li>
                 </ul>
               </div>
@@ -212,14 +228,19 @@ const Home = ({ onEstimateClick }: HomeProps) => {
       {/* Process Section */}
       <section
         ref={processAnimation.elementRef}
-        className={`py-12 lg:py-20 px-4 bg-white transition-all duration-700 ${
+        className={`py-20 lg:py-32 px-4 bg-dawn transition-all duration-700 ${
           processAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container mx-auto">
-          <h2 className="text-3xl lg:text-5xl font-bold text-center mb-12">A Smooth, 4-Step Experience</h2>
+          <div className="text-center mb-16 lg:mb-20">
+            <h2 className="text-4xl lg:text-6xl font-black tracking-tight mb-6">
+              A Smooth, 4-Step Experience
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#D8B878] to-[#C9A86A] mx-auto rounded-full"></div>
+          </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 number: "1",
@@ -244,14 +265,13 @@ const Home = ({ onEstimateClick }: HomeProps) => {
             ].map((step, index) => (
               <Card
                 key={index}
-                className="p-6 border-2 hover:border-primary card-hover bg-white"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`p-8 border-2 border-border bg-white hover:border-[#D8B878] hover:shadow-[0_30px_80px_rgba(18,20,23,0.16)] hover:-translate-y-1 transition-all duration-500 scroll-reveal stagger-${index + 1}`}
               >
-                <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xl font-bold mb-4 shadow-lg">
+                <div className="timeline-badge mb-6">
                   {step.number}
                 </div>
-                <h3 className="font-bold text-lg mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
+                <h3 className="font-black text-xl mb-3 tracking-tight">{step.title}</h3>
+                <p className="text-base text-muted leading-relaxed">{step.description}</p>
               </Card>
             ))}
           </div>
@@ -261,16 +281,23 @@ const Home = ({ onEstimateClick }: HomeProps) => {
       {/* Savings Calculator */}
       <section
         ref={calculatorAnimation.elementRef}
-        className={`py-12 lg:py-20 px-4 transition-all duration-700 ${
+        className={`py-20 lg:py-32 px-4 bg-white transition-all duration-700 ${
           calculatorAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
-        <div className="container mx-auto max-w-2xl">
-          <Card className="p-8 lg:p-12 bg-white border-2 shadow-xl">
-            <h2 className="text-3xl font-bold mb-6">Estimate Your Bundle Savings</h2>
-            <div className="space-y-6">
+        <div className="container mx-auto max-w-3xl">
+          <Card className="p-10 lg:p-16 border-2 border-[#D8B878] shadow-[0_30px_80px_rgba(18,20,23,0.16)]">
+            <div className="text-center mb-10">
+              <h2 className="text-4xl lg:text-5xl font-black tracking-tight mb-4">
+                Estimate Your Bundle Savings
+              </h2>
+              <p className="text-lg text-muted">
+                The more you order, the more you save
+              </p>
+            </div>
+            <div className="space-y-8">
               <div>
-                <label htmlFor="blind-count" className="block text-sm font-medium mb-2">
+                <label htmlFor="blind-count" className="block text-base font-bold mb-4">
                   How many blinds are you ordering?
                 </label>
                 <Input
@@ -279,17 +306,20 @@ const Home = ({ onEstimateClick }: HomeProps) => {
                   min="1"
                   value={blindCount}
                   onChange={(e) => setBlindCount(parseInt(e.target.value) || 0)}
-                  className="text-lg"
+                  className="text-xl h-14 rounded-[14px] border-2"
                 />
               </div>
-              <div style={{ background: 'var(--bg-secondary)' }} className="p-6 rounded-xl border-2 border-[#D4AF78]/30">
-                <p className="text-2xl font-bold mb-2">
-                  Your discount: <span className="gradient-text font-bold">{discount}%</span>
+              <div className="bg-gradient-to-br from-[#D8B878]/10 to-[#C9A86A]/5 p-8 rounded-[18px] border-2 border-[#D8B878]/40">
+                <p className="text-3xl font-black mb-3">
+                  Your discount: <span className="gradient-text">{discount}%</span>
                 </p>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted">
                   Final pricing provided after a free on-site estimate.
                 </p>
               </div>
+              <Button variant="gold" size="lg" className="w-full" onClick={onEstimateClick}>
+                Get Your Free Estimate
+              </Button>
             </div>
           </Card>
         </div>

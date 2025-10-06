@@ -3,80 +3,89 @@
 @tailwind utilities;
 
 /* 
-=== PATIO BLINDS DIRECT - PREMIUM COLOR SYSTEM ===
-Inspired by: Restoration Hardware × Apple × Architectural Digest
-Aesthetic: Luxurious, warm, trustworthy, timeless
+=== PATIO BLINDS DIRECT - LUXURY SOCAL DESIGN SYSTEM ===
+Inspired by: Architectural Digest × High-end residential brochures
+Aesthetic: Editorial, sun-washed SoCal, modern architectural luxury
+Materials: Stone, glass, brushed metal, soft sand
 */
 
 @layer base {
   :root {
-    /* === PRIMARY BRAND COLORS === */
-    --brand-primary: #1A2332;          /* Deep charcoal-navy (main brand) */
-    --brand-secondary: #2D3E50;        /* Muted slate (hover states) */
+    /* === BRAND COLORS === */
+    --brand: #1F2A3A;                  /* Deep navy-charcoal */
+    --brand-600: #2A3A52;              /* Hover state */
     
     /* === ACCENT COLORS === */
-    --accent-gold: #D4AF78;            /* Warm champagne gold (luxury accent) */
-    --accent-gold-dark: #B8935E;       /* Deeper gold (hover) */
-    --sage-accent: #A8B5A7;            /* Desaturated sage (freshness) */
+    --accent: #D8B878;                 /* Champagne gold */
+    --accent-700: #B79556;             /* Deeper gold */
+    --success: #5E8F74;                /* Sage green */
     
-    /* === BACKGROUND COLORS === */
-    --bg-primary: #FDFCFA;             /* Soft ivory (main background) */
-    --bg-secondary: #F5F3F0;           /* Light sand/stone (section contrast) */
-    --bg-tertiary: #EBE9E5;            /* Deeper neutral (subtle sections) */
-    --surface: #FFFFFF;                /* Pure white (cards, modals) */
+    /* === BACKGROUNDS === */
+    --bg: #F7F6F2;                     /* Warm ivory */
+    --surface: #FFFFFF;                /* Pure white */
     
     /* === TEXT COLORS === */
-    --text-primary: #1A1A1A;           /* Rich near-black (headings, body) */
-    --text-secondary: #5A5A5A;         /* Medium gray (secondary text) */
-    --text-muted: #8A8A8A;             /* Light gray (captions, helpers) */
+    --text: #121417;                   /* Near black */
+    --muted: #6E737B;                  /* Medium gray */
     
-    /* === BORDERS & DIVIDERS === */
-    --border-light: #E8E6E2;           /* Subtle divider */
-    --border-medium: #D4D2CE;          /* More visible border */
-    
-    /* === FOOTER === */
-    --footer-bg: #1A2332;              /* Deep charcoal (matches brand) */
-    --footer-text: #C4C4C4;            /* Light gray for readability */
+    /* === BORDERS === */
+    --border: #E6E1D8;                 /* Warm border */
     
     /* === TAILWIND COMPATIBILITY (HSL) === */
-    --background: 40 25% 99%;          /* bg-primary */
-    --foreground: 0 0% 10%;            /* text-primary */
-    --card: 0 0% 100%;                 /* surface */
-    --card-foreground: 0 0% 10%;
-    --primary: 212 31% 15%;            /* brand-primary */
+    --background: 48 25% 96%;          /* --bg */
+    --foreground: 216 10% 8%;          /* --text */
+    --card: 0 0% 100%;                 /* --surface */
+    --card-foreground: 216 10% 8%;
+    --primary: 213 32% 18%;            /* --brand */
     --primary-foreground: 0 0% 100%;
-    --secondary: 212 26% 25%;          /* brand-secondary */
+    --secondary: 213 28% 24%;          /* --brand-600 */
     --secondary-foreground: 0 0% 100%;
-    --accent: 37 43% 66%;              /* accent-gold */
-    --accent-foreground: 0 0% 10%;
-    --muted: 0 0% 54%;
-    --muted-foreground: 0 0% 54%;
+    --accent: 39 48% 66%;              /* --accent */
+    --accent-foreground: 213 32% 18%;
+    --muted: 214 8% 47%;
+    --muted-foreground: 214 8% 47%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    --border: 40 14% 90%;
-    --input: 40 14% 90%;
-    --ring: 212 31% 15%;
-    --radius: 0.75rem;
+    --border: 36 15% 91%;
+    --input: 36 15% 91%;
+    --ring: 39 48% 66%;
+    --radius: 1.125rem;
     
-    /* === PREMIUM DESIGN TOKENS === */
-    --gradient-primary: linear-gradient(135deg, #1A2332 0%, #2D3E50 100%);
-    --gradient-gold: linear-gradient(135deg, #D4AF78 0%, #E5C590 100%);
-    --gradient-warm: linear-gradient(180deg, #FDFCFA 0%, #F5F3F0 100%);
-    --gradient-button-hover: linear-gradient(135deg, #1A2332 0%, #D4AF78 100%);
-    --shadow-elegant: 0 1px 3px rgba(26, 35, 50, 0.04), 0 10px 20px rgba(26, 35, 50, 0.06);
-    --shadow-premium: 0 20px 40px rgba(26, 35, 50, 0.12);
-    --shadow-gold: 0 8px 24px rgba(212, 175, 120, 0.15);
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* === SIGNATURE GRADIENTS === */
+    --gradient-dawn-sand: 
+      radial-gradient(900px 500px at 20% 0%, rgba(216,184,120,.18), transparent 60%),
+      linear-gradient(180deg, #FBFAF8 0%, #F1EFEA 80%);
+    
+    --gradient-dusk-navy: 
+      radial-gradient(700px 400px at 15% -10%, rgba(216,184,120,.12), transparent 55%),
+      linear-gradient(180deg, #1C2635 0%, #111823 100%);
+    
+    --gradient-gold-sweep: linear-gradient(90deg, transparent, #D8B878, transparent);
+    
+    --gradient-gold: linear-gradient(135deg, #D8B878 0%, #C9A86A 100%);
+    --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-700));
+    
+    /* === PREMIUM SHADOWS === */
+    --shadow-e1: 0 10px 30px rgba(18, 20, 23, 0.08);
+    --shadow-e2: 0 30px 80px rgba(18, 20, 23, 0.16);
+    --shadow-gold: 0 12px 32px rgba(216, 184, 120, 0.2);
+    
+    /* === MOTION === */
+    --ease-elegant: cubic-bezier(0.2, 0.8, 0.2, 1);
+    --transition-smooth: all 400ms var(--ease-elegant);
+    --transition-fast: all 300ms var(--ease-elegant);
+    
+    /* === NOISE TEXTURE (2% grain) === */
+    --noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 48 25% 96%;
+    --sidebar-foreground: 213 32% 18%;
+    --sidebar-primary: 213 32% 18%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 39 48% 66%;
+    --sidebar-accent-foreground: 213 32% 18%;
+    --sidebar-border: 36 15% 91%;
+    --sidebar-ring: 39 48% 66%;
   }
 }
 
@@ -98,130 +107,217 @@ Aesthetic: Luxurious, warm, trustworthy, timeless
 }
 
 @layer utilities {
-  /* === PREMIUM CARD STYLES === */
-  .card-hover {
+  /* === GLASS CARD STYLES === */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow-e1);
     transition: var(--transition-smooth);
   }
 
-  .card-hover:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-premium);
+  .glass-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-e2);
   }
 
-  /* === GRADIENT TEXT EFFECTS === */
+  .glass-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-gold-sweep);
+    opacity: 0;
+    transition: opacity 300ms var(--ease-elegant);
+  }
+
+  .glass-card:hover::after {
+    opacity: 1;
+  }
+
+  /* === GRADIENT TEXT === */
   .gradient-text {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
-  
-  /* === PREMIUM BADGE STYLES === */
-  .gold-badge {
-    background: var(--gradient-gold);
-    color: var(--brand-primary);
-    font-weight: 600;
-    letter-spacing: 0.02em;
-  }
-  
-  /* === PREMIUM CARD BACKGROUNDS === */
-  .premium-card {
-    background: var(--gradient-primary);
-    box-shadow: var(--shadow-premium);
-  }
-  
-  .surface-card {
-    background: var(--surface);
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow-elegant);
-  }
-  
-  /* === BUTTON STYLES === */
-  .btn-primary {
-    background: var(--brand-primary);
-    color: var(--surface);
-    transition: var(--transition-smooth);
-  }
-  
-  .btn-primary:hover {
-    background: var(--gradient-button-hover);
-    box-shadow: var(--shadow-gold);
-    transform: translateY(-2px);
-  }
-  
-  .btn-gold {
-    background: var(--gradient-gold);
-    color: var(--brand-primary);
-    font-weight: 600;
-    transition: var(--transition-smooth);
-  }
-  
-  .btn-gold:hover {
-    background: linear-gradient(135deg, #E5C590 0%, #D4AF78 100%);
-    box-shadow: var(--shadow-gold);
-    transform: translateY(-2px);
-  }
-  
+
   /* === SECTION BACKGROUNDS === */
-  .bg-warm {
-    background: var(--gradient-warm);
-  }
-  
-  .bg-sage {
-    background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(168, 181, 167, 0.08) 100%);
+  .bg-dawn {
+    background: var(--gradient-dawn-sand);
+    position: relative;
   }
 
-  /* === ANIMATIONS === */
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+  .bg-dawn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--noise);
+    pointer-events: none;
+    opacity: 0.4;
   }
 
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+  .bg-dusk {
+    background: var(--gradient-dusk-navy);
+    color: #fff;
+    position: relative;
+  }
+
+  .bg-dusk::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--noise);
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  /* === TRUST BADGES === */
+  .trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(216, 184, 120, 0.1);
+    border: 1px solid rgba(216, 184, 120, 0.3);
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--brand);
+  }
+
+  /* === ICON MEDALLIONS === */
+  .icon-medallion {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: rgba(216, 184, 120, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+  }
+
+  .icon-medallion:hover {
+    background: rgba(216, 184, 120, 0.2);
+    transform: scale(1.1);
+  }
+
+  /* === TIMELINE BADGES === */
+  .timeline-badge {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--brand);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    box-shadow: var(--shadow-e1);
+  }
+
+  /* === SCROLL ANIMATIONS === */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: scrollReveal 600ms var(--ease-elegant) forwards;
+  }
+
+  @keyframes scrollReveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .stagger-1 { animation-delay: 60ms; }
+  .stagger-2 { animation-delay: 120ms; }
+  .stagger-3 { animation-delay: 180ms; }
+  .stagger-4 { animation-delay: 240ms; }
+  .stagger-5 { animation-delay: 300ms; }
+  .stagger-6 { animation-delay: 360ms; }
+
+  /* === HOVER SCALE === */
+  .hover-scale {
+    transition: transform 300ms var(--ease-elegant);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.03);
+  }
+
+  /* === PULSE RING (for CTAs) === */
+  @keyframes pulseRing {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(216, 184, 120, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 12px rgba(216, 184, 120, 0);
+    }
+  }
+
+  .pulse-ring {
+    animation: pulseRing 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* === SHINE EFFECT === */
+  @keyframes shine {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .shine {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(216, 184, 120, 0.12) 50%,
+      transparent 100%
+    );
+    background-size: 200% 100%;
+    animation: shine 2s linear infinite;
+  }
+
+  /* === FLOATING ANIMATION === */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-6px) scale(1.02);
+    }
   }
 
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* === HERO PARALLAX === */
+  .parallax-slow {
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
+  /* === REDUCED MOTION === */
   @media (prefers-reduced-motion: reduce) {
-    .card-hover:hover,
-    .animate-fade-in,
-    .animate-slide-up,
-    .animate-float {
-      animation: none;
-      transform: none;
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }

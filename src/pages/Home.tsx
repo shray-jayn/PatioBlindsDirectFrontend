@@ -9,8 +9,8 @@ import Testimonials from "@/components/Testimonials";
 import Benefits from "@/components/Benefits";
 import Guarantee from "@/components/Guarantee";
 import HeroTrustBadges from "@/components/HeroTrustBadges";
-import level2Image from "@/assets/level-2-zip-track.jpg";
-import level1Image from "@/assets/level-1-wire-secured.jpg";
+import level2Image from "@/assets/Blind2.png";
+import level1Image from "@/assets/Blind1.png";
 import heroImage from "@/assets/hero-patio.png";
 
 interface HomeProps {

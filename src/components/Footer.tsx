@@ -88,7 +88,7 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
                 Phone: <a href="tel:6264304003" className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline">(626) 430-4003</a>
               </p>
               <p className="text-sm text-muted-foreground">
-                Email: <a href="mailto:hello@patioblindsdirect.com" className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline">hello@patioblindsdirect.com</a>
+                Email: <a href="mailto:joe@patioblindsdirect.com" className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline">joe@patioblindsdirect.com</a>
               </p>
             </div>
 

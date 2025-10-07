@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Phone, ArrowLeft, CheckCircle2, MapPin, Mail } from "lucide-react";
 import { getLocationBySlug } from "@/data/locations";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import level2Image from "@/assets/level-2-zip-track.jpg";
-import level1Image from "@/assets/level-1-wire-secured.jpg";
+import level2Image from "@/assets/Blind2.png";
+import level1Image from "@/assets/Blind1.png";
 
 interface LocationDetailProps {
   onEstimateClick: () => void;

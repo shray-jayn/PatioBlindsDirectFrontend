@@ -36,7 +36,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
 
   return (
     <nav
-      className={`fixed top-[40px] left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-[40px] left-0 right-0 z-[70] transition-all duration-300 ${
         isScrolled
           ? "bg-white/95 backdrop-blur-lg shadow-sm border-b border-border"
           : "bg-white/80 backdrop-blur-sm"

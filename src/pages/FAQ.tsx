@@ -1,4 +1,9 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, Mail } from "lucide-react";
@@ -72,13 +77,18 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
       <section
         ref={heroAnimation.elementRef}
         className={`py-12 lg:py-16 px-4 transition-all duration-700 ${
-          heroAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          heroAnimation.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-6">Frequently Asked Questions</h1>
+          <h1 className="text-4xl lg:text-6xl font-bold mb-6">
+            Frequently Asked Questions
+          </h1>
           <p className="text-lg text-muted-foreground">
-            Everything you need to know about our patio blinds, installation, and service.
+            Everything you need to know about our patio blinds, installation,
+            and service.
           </p>
         </div>
       </section>
@@ -87,11 +97,18 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
       <section
         ref={faqAnimation.elementRef}
         className={`py-12 px-4 transition-all duration-700 ${
-          faqAnimation.isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          faqAnimation.isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-10"
         }`}
       >
         <div className="container mx-auto max-w-3xl">
-          <Accordion type="single" collapsible className="space-y-4" defaultValue="item-0">
+          <Accordion
+            type="single"
+            collapsible
+            className="space-y-4"
+            defaultValue="item-0"
+          >
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
@@ -114,15 +131,26 @@ const FAQ = ({ onEstimateClick }: FAQProps) => {
       <section className="py-12 lg:py-16 px-4 bg-gradient-to-br from-slate-50 to-white border-t">
         <div className="container mx-auto max-w-3xl">
           <Card className="p-8 lg:p-12 text-center bg-white border-2 shadow-xl">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Transform Your Patio?</h2>
+            <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+              Ready to Transform Your Patio?
+            </h2>
             <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
-              Get expert advice and a free estimate. Most projects completed in 2-3 days.
+              Get expert advice and a free estimate. Most projects completed in
+              2-3 days.
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button size="lg" asChild className="hover:scale-105 transition-transform shadow-lg">
-                <a href="tel:6264304003">Call (626) 430-4003</a>
+              <Button
+                size="lg"
+                asChild
+                className="hover:scale-105 transition-transform shadow-lg"
+              >
+                <a href="tel:6264304003">Call (657) 895-5989</a>
               </Button>
-              <Button size="lg" variant="outline" className="hover:scale-105 transition-transform border-2">
+              <Button
+                size="lg"
+                variant="outline"
+                className="hover:scale-105 transition-transform border-2"
+              >
                 Request Free Estimate
               </Button>
             </div>

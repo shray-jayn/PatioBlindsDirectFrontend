@@ -119,7 +119,7 @@ const Locations = () => {
                       className="block text-sm font-semibold text-[#D4AF78] hover:text-[#D4AF78]/80 transition-colors mb-3"
                     >
                       <Phone className="w-3.5 h-3.5 inline mr-1.5" />
-                      (626) 430-4003
+                      (657) 895-5989
                     </a>
                     <Button
                       size="sm"
@@ -214,7 +214,7 @@ const Locations = () => {
               >
                 <a href="tel:6264304003">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (626) 430-4003
+                  Call (657) 895-5989
                 </a>
               </Button>
               <Button

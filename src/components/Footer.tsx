@@ -12,9 +12,12 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
       <div className="container mx-auto px-4 lg:px-8 py-12 lg:py-16">
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-8">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Get a FREE On-Site Estimate</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Get a FREE On-Site Estimate
+            </h2>
             <p className="text-muted-foreground mb-6">
-              Call us now or request your visit. Most installs completed in days, not weeks.
+              Call us now or request your visit. Most installs completed in
+              days, not weeks.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button
@@ -24,7 +27,7 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
               >
                 <a href="tel:6264304003">
                   <Phone className="w-4 h-4 mr-2" />
-                  Call (626) 430-4003
+                  Call (657) 895-5989
                 </a>
               </Button>
               <Button
@@ -74,7 +77,10 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
               <p className="text-sm text-muted-foreground">
                 Serving all Southern California
               </p>
-              <Link to="/locations" className="text-sm text-[#D4AF78] hover:text-[#E5C590] transition-colors underline hover:no-underline">
+              <Link
+                to="/locations"
+                className="text-sm text-[#D4AF78] hover:text-[#E5C590] transition-colors underline hover:no-underline"
+              >
                 See all locations
               </Link>
             </div>
@@ -85,26 +91,50 @@ const Footer = ({ onEstimateClick }: FooterProps) => {
                 Contact
               </h3>
               <p className="text-sm text-muted-foreground">
-                Phone: <a href="tel:6264304003" className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline">(626) 430-4003</a>
+                Phone:{" "}
+                <a
+                  href="tel:6264304003"
+                  className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline"
+                >
+                  (657) 895-5989
+                </a>
               </p>
               <p className="text-sm text-muted-foreground">
-                Email: <a href="mailto:joe@patioblindsdirect.com" className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline">joe@patioblindsdirect.com</a>
+                Email:{" "}
+                <a
+                  href="mailto:joe@patioblindsdirect.com"
+                  className="text-[#D4AF78] hover:text-[#E5C590] transition-colors hover:underline"
+                >
+                  joe@patioblindsdirect.com
+                </a>
               </p>
             </div>
 
             <div>
               <h3 className="font-semibold mb-3">Quick Links</h3>
               <div className="flex flex-col gap-2 text-sm">
-                <Link to="/products" className="text-muted-foreground hover:text-[#D4AF78] transition-colors">
+                <Link
+                  to="/products"
+                  className="text-muted-foreground hover:text-[#D4AF78] transition-colors"
+                >
                   Products
                 </Link>
-                <Link to="/commercial" className="text-muted-foreground hover:text-[#D4AF78] transition-colors">
+                <Link
+                  to="/commercial"
+                  className="text-muted-foreground hover:text-[#D4AF78] transition-colors"
+                >
                   Commercial
                 </Link>
-                <Link to="/locations" className="text-muted-foreground hover:text-[#D4AF78] transition-colors">
+                <Link
+                  to="/locations"
+                  className="text-muted-foreground hover:text-[#D4AF78] transition-colors"
+                >
                   Locations
                 </Link>
-                <Link to="/faq" className="text-muted-foreground hover:text-[#D4AF78] transition-colors">
+                <Link
+                  to="/faq"
+                  className="text-muted-foreground hover:text-[#D4AF78] transition-colors"
+                >
                   FAQ
                 </Link>
               </div>

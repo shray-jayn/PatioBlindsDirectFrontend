@@ -113,7 +113,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
               className="hidden sm:flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
             >
               <Phone className="w-4 h-4" />
-              (626) 430-4003
+              (657) 895-5989
             </a>
 
             <Button
@@ -202,7 +202,7 @@ const Navbar = ({ onEstimateClick }: NavbarProps) => {
               className="flex items-center gap-2 text-lg font-medium py-3 px-4 rounded-lg hover:bg-[#D4AF78]/10 transition-colors"
             >
               <Phone className="w-5 h-5" />
-              (626) 430-4003
+              (657) 895-5989
             </a>
             <Button
               onClick={() => {
